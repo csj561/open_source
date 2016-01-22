@@ -1,5 +1,8 @@
-# use this command to complie zbar library. Add CFLAGS="" for a bug.
+ use this command to complie zbar library. Add CFLAGS="" for a bug.
 ./configure --prefix=`pwd`/_install --disable-video --without-imagemagick --without-gtk  --without-qt --without-python CFLAGS=""
 
-# libpng add 
-#define png_set_gray_1_2_4_to_8 png_set_expand_gray_1_2_4_to_8
+libpng add to png.h
+define png_set_gray_1_2_4_to_8 png_set_expand_gray_1_2_4_to_8
+
+
+-fvisibility=hidden -fvisibility-inlines-hidden 参数会收.o文件生成静态库时，符号不可见，慎用
