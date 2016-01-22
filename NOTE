@@ -1,0 +1,5 @@
+# use this command to complie zbar library. Add CFLAGS="" for a bug.
+./configure --prefix=`pwd`/_install --disable-video --without-imagemagick --without-gtk  --without-qt --without-python CFLAGS=""
+
+# libpng add 
+#define png_set_gray_1_2_4_to_8 png_set_expand_gray_1_2_4_to_8
