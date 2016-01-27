@@ -5,4 +5,4 @@ libpng add to png.h
 define png_set_gray_1_2_4_to_8 png_set_expand_gray_1_2_4_to_8
 
 
--fvisibility=hidden -fvisibility-inlines-hidden 参数会收.o文件生成静态库时，符号不可见，慎用
+-fvisibility=hidden -fvisibility-inlines-hidden 参数会使.o文件生成动态库时，符号不可见，慎用,要导出的函数或者变量前面要手动加上__attribute__ ((visibility("default")))，否则其它程序无法链接。
